@@ -1,0 +1,8 @@
+[2023-07-26 13:25:02 +0800] [17622] [INFO] Starting gunicorn 21.2.0
+[2023-07-26 13:25:02 +0800] [17622] [INFO] Listening at: unix:/tmp/47.108.255.150.socket (17622)
+[2023-07-26 13:25:02 +0800] [17622] [INFO] Using worker: sync
+[2023-07-26 13:25:02 +0800] [17623] [INFO] Booting worker with pid: 17623
+[2023-07-26 13:25:26 +0800] [17622] [INFO] Handling signal: hup
+[2023-07-26 13:25:26 +0800] [17622] [INFO] Hang up: Master
+[2023-07-26 13:25:26 +0800] [17622] [ERROR] Worker (pid:17623) was sent SIGHUP!
+[2023-07-26 13:25:26 +0800] [17633] [INFO] Booting worker with pid: 17633

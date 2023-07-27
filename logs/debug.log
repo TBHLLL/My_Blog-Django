@@ -1735,6 +1735,7 @@ Forbidden (CSRF token missing.): /article/increase-likes/12/
 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
 "GET /admin/r/7/13/ HTTP/1.1" 302 0
+<<<<<<< HEAD
 Watching for file changes with StatReloader
 Invalid HTTP_HOST header: '192.168.0.104:8000'. You may need to add '192.168.0.104' to ALLOWED_HOSTS.
 Traceback (most recent call last):
@@ -1832,3 +1833,40 @@ Traceback (most recent call last):
 django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '192.168.0.104:8000'. You may need to add '192.168.0.104' to ALLOWED_HOSTS.
 Bad Request: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 400 143
+=======
+Not Found: /article/article_list
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Internal Server Error: /userprofile/register/
+Traceback (most recent call last):
+  File "/home/sites/blog.site/env/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 121, in login
+    backend = backend or user.backend
+AttributeError: 'User' object has no attribute 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sites/blog.site/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/sites/blog.site/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sites/blog.site/My_Blog-Django/userprofile/views.py", line 42, in user_register
+    login(request,new_user)
+  File "/home/sites/blog.site/env/lib/python3.10/site-packages/django/contrib/auth/__init__.py", line 127, in login
+    raise ValueError(
+ValueError: You have multiple authentication backends configured and therefore must provide the `backend` argument or set the `backend` attribute on the user.
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+>>>>>>> d9fb771f871fff39f6597b5f41106a126c115cfc
