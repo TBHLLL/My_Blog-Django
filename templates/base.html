@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <!-- 引入monikai.css -->
     <link rel="stylesheet" href="{% static 'md_css/monokai.css' %}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 </head>
 
 <body>
@@ -43,4 +45,19 @@
         }
     </style>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const comment = document.querySelector('#comment')
+    if (comment) {
+      const utterances = document.createElement('script')
+      utterances.setAttribute('src', 'https://utteranc.es/client.js')
+      utterances.setAttribute('repo', 'TBHLLL/My_Blog_Talk')
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', 'preferred-color-scheme')
+      utterances.setAttribute('crossOrigin', 'anonymous')
+      utterances.setAttribute('async', 'true')
+      comment.appendChild(utterances)
+    }
+  })
+</script>
 </html>
