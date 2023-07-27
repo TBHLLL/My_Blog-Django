@@ -4,13 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
-
-    <link rel="favicon.ico" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <!-- 引入monikai.css -->
     <link rel="stylesheet" href="{% static 'md_css/monokai.css' %}">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 </head>
 
 <body>
@@ -28,10 +26,6 @@
     <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'prism/prism.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
-
-
-    <script src="{% static 'editormd/editormd.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'editormd/css/editormd.css' %}" />
     {% include 'back_to_top_func.html' %}
     {% block script %}{% endblock script %}
     <style>
@@ -51,21 +45,19 @@
         }
     </style>
 </body>
-<script type="text/javascript">
-    $(function() {
-        var editor = editormd("test-editor", {
-            // width  : "100%",
-            // height : "100%",
-            path   : "{% static 'editormd/lib/' %}"
-            height:'350px',
-            syncScrolling : "single",
-            emoji:true,
-            imageUpload: true, //启动本地图片上传功能
-            watch:true,
-            imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp","zip","rar"],
-            imageUploadURL : "{% media 'mdimg/%Y-%m-%d/", //文件提交请求路径
-            saveHTMLToTextarea : true, //注意3：这个配置，方便post提交表单
-        });
-    });
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const comment = document.querySelector('#comment')
+    if (comment) {
+      const utterances = document.createElement('script')
+      utterances.setAttribute('src', 'https://utteranc.es/client.js')
+      utterances.setAttribute('repo', 'TBHLLL/My_Blog_Talk')
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', 'preferred-color-scheme')
+      utterances.setAttribute('crossOrigin', 'anonymous')
+      utterances.setAttribute('async', 'true')
+      comment.appendChild(utterances)
+    }
+  })
 </script>
 </html>

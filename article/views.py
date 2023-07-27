@@ -9,6 +9,8 @@ import markdown
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.db.models import Q
+from comment.models import Comment
+from comment.forms import CommentForm
 
 
 def article_list(request):
