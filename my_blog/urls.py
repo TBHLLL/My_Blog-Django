@@ -27,9 +27,8 @@ urlpatterns = [
     # 新增代码，配置app的url
     path('article/', include('article.urls', namespace='article')),
     path('userprofile/', include('userprofile.urls', namespace='userprofile')),
-    path('comment/', include('comment.urls', namespace='comment')),
     path('inbox/notifications/', include('notifications.urls', namespace='notifications')),
-    path('notice/', include('notice.urls', namespace='notice')),
     path('account/', include('allauth.urls')),
+    #path('ftp/',include('ftp.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
