@@ -157,7 +157,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # 新增
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['47.108.255.150']
 
 # SMTP服务器，改为你的邮箱的smtp!
 EMAIL_HOST = 'smtp.qq.com'
@@ -226,7 +226,7 @@ LOGIN_REDIRECT_URL = '/'
 #     },
 # }
 
-DEBUG = True
+DEBUG = False
 
 # 隐藏右侧SimpleUI广告链接和使用分析
 SIMPLEUI_HOME_INFO = False
