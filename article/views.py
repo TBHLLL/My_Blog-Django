@@ -40,7 +40,6 @@ def article_list(request):
 
 def article_detail(request, id):
     article = ArticlePost.objects.get(id=id)
-    comments = Comment.objects.filter(article=id)
     article.total_views += 1
     article.save(update_fields=['total_views'])
     md = markdown.Markdown(
@@ -50,8 +49,7 @@ def article_detail(request, id):
                                          'markdown.extensions.toc'
                                      ])
     article.body = md.convert(article.body)
-    comment_form = CommentForm()
-    context = {'article': article,'toc': md.toc, 'comments': comments, 'comment_form': comment_form}
+    context = {'article': article,'toc': md.toc }
     return render(request, 'article/detail.html', context)
 
 
