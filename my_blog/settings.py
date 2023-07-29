@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     # 可添加需要的第三方登录
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.weibo',
+    "sslserver",
 ]
 
 
@@ -106,6 +107,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+#         'NAME': 'blog_db',  # 数据库名称
+#         'HOST': '127.0.0.1',  # 数据库地址，本机 ip 地址 127.0.0.1
+#         'PORT': 3306,  # 端口
+#         'USER': 'root',  # 数据库用户名
+#         'PASSWORD': 'tbhlllstudywiki351',  # 数据库密码
+#     }
+# }
 
 
 # Password validation
@@ -231,3 +242,6 @@ DEBUG = True
 # 隐藏右侧SimpleUI广告链接和使用分析
 SIMPLEUI_HOME_INFO = False
 SIMPLEUI_ANALYSIS = False
+
+handler404 = "server.views.page_not_found"
+handler500 = "server.views.page_error"

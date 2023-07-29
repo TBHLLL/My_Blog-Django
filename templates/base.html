@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
-    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
-    <link rel="favicon.ico" href="{% static 'img/favicon.ico' %}">
+
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <!-- 引入monikai.css -->
     <link rel="stylesheet" href="{% static 'md_css/monokai.css' %}">
+    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>-->
 </head>
@@ -32,6 +33,7 @@
 
     <script src="{% static 'editormd/editormd.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'editormd/css/editormd.css' %}" />
+    <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
     {% include 'back_to_top_func.html' %}
     {% block script %}{% endblock script %}
     <style>
@@ -56,14 +58,14 @@
         var editor = editormd("test-editor", {
             // width  : "100%",
             // height : "100%",
-            path   : "{% static 'editormd/lib/' %}"
+            path   : "{% static 'editormd/lib/' %}",
             height:'350px',
             syncScrolling : "single",
             emoji:true,
             imageUpload: true, //启动本地图片上传功能
             watch:true,
             imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp","zip","rar"],
-            imageUploadURL : "{% media 'mdimg/%Y-%m-%d/", //文件提交请求路径
+            imageUploadURL : "% media 'mdimg/%Y-%m-%d/ %}", //文件提交请求路径
             saveHTMLToTextarea : true, //注意3：这个配置，方便post提交表单
         });
     });
