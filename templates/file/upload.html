@@ -1,0 +1,12 @@
+<!-- extends表明此页面继承自 base.html 文件 -->
+{% extends "base.html" %} {% load static %}
+<!-- 写入 base.html 中定义的 title -->
+{% block title %} 上传文件 {% endblock title %}
+<!-- 写入 base.html 中定义的 content -->
+{% block content %}
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" class="form-control-file" name="file" id="file">
+    <button>上传</button>
+</form>
+{% endblock content %}
