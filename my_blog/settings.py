@@ -227,7 +227,9 @@ LOGIN_REDIRECT_URL = '/'
 #     'handlers': {
 #         'file': {
 #             'level': 'INFO',
-#             'class': 'logging.FileHandler',
+#             'class': 'logging.handlers.TimedRotatingFileHandler',
+#             'when': 'midnight',
+#             'backupCount': 30,
 #             'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
 #         },
 #     },
