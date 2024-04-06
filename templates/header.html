@@ -17,6 +17,11 @@
             文章
         </a>
     </div>
+    <div class="Header-item">
+        <a href="{% url 'websites:websites_zhongkao' %}" class="Header-link">
+            其它页面
+        </a>
+    </div>
     {% if user.is_authenticated %}
     {% if user.id == 4 %}
     <div class="Header-item right-0">

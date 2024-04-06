@@ -29,7 +29,8 @@ urlpatterns = [
     path('userprofile/', include('userprofile.urls', namespace='userprofile')),
     path('inbox/notifications/', include('notifications.urls', namespace='notifications')),
     path('account/', include('allauth.urls')),
-    path('file/',include('ftp.urls'))
+    path('file/',include('ftp.urls')),
     #path('server/',include('server.urls')),
+    path('websites/', include('websites.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
