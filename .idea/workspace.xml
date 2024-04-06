@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8a4dee7-1573-4465-8274-b8ce5df3e7a9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/websites/zhongkaotime.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websites/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websites/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websites/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websites/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websites/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websites/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websites/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websites/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/article/20230727/th.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/article/20230727/th.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-    </list>
+    <list default="true" id="a8a4dee7-1573-4465-8274-b8ce5df3e7a9" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +158,7 @@
       <workItem from="1712325968516" duration="1599000" />
       <workItem from="1712374899821" duration="801000" />
       <workItem from="1712376881779" duration="3159000" />
-      <workItem from="1712411940669" duration="1278000" />
+      <workItem from="1712411940669" duration="1578000" />
     </task>
     <servers />
   </component>
