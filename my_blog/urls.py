@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from article.views import article_list
 import notifications.urls
+import server.views
 # 存放映射关系的列表
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,7 +31,8 @@ urlpatterns = [
     path('inbox/notifications/', include('notifications.urls', namespace='notifications')),
     path('account/', include('allauth.urls')),
     path('file/',include('ftp.urls')),
-    #path('server/',include('server.urls')),
+    path('server/404',server.views.pageNotFound),
+    path('server/500',server.views.page_error),
     path('websites/', include('websites.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

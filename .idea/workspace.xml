@@ -7,7 +7,16 @@
     <list default="true" id="a8a4dee7-1573-4465-8274-b8ce5df3e7a9" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/article/20230727/th.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/article/20230727/th.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/old code" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qodana.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/article/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/server/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/server/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/server/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/server/500.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +91,21 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\My_Blog-Django\templates\websites" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Grunt" flag="true" />
+      <visibility group="Gulp" flag="true" />
+      <visibility group="HTTP 请求" flag="true" />
+      <visibility group="Node.js" flag="true" />
+      <visibility group="npm" flag="true" />
+      <visibility group="yarn" flag="true" />
+      <visibility group="最近的项目" flag="true" />
+      <visibility group="运行 Python 文件" flag="true" />
+      <visibility group="运行 conda 命令" flag="true" />
+      <visibility group="运行 pip 命令" flag="true" />
+      <visibility group="运行配置" flag="true" />
+    </myKeys>
   </component>
   <component name="RunManager" selected="Django 服务器.未命名">
     <configuration name="未命名" type="DjangoTestsConfigurationType" nameIsGenerated="true">
@@ -164,6 +188,8 @@
       <workItem from="1712376881779" duration="3159000" />
       <workItem from="1712411940669" duration="1876000" />
       <workItem from="1712413973237" duration="56000" />
+      <workItem from="1712465259934" duration="2981000" />
+      <workItem from="1712497930935" duration="1670000" />
     </task>
     <servers />
   </component>
