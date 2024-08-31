@@ -1,5 +1,3 @@
-
-
 <!-- extends表明此页面继承自 base.html 文件 -->
 {% extends "base.html" %}
 {% load static %}
@@ -8,185 +6,193 @@
 {% block title %}
     文章详情
 {% endblock title %}
-
+{% block head %}
+    <style>
+        #sidebar {
+            will-change: min-height;
+        }
+        .sidebar__inner {
+            transform: translate(0, 0);
+            will-change: position, transform;
+        }
+    </style>
+    <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'prism/prism.css' %}">
+    <script src="{% static 'prism/prism.js' %}"></script>
+{% endblock head %}
 <!-- 写入 base.html 中定义的 content -->
 {% block content %}
-<style>
-    #sidebar{
-        will-change: min-height;
-    }
-    .sidebar__inner{
-        transform: translate(0,0);
-        will-change: position, transform;
-    }
-</style>
-<!-- 文章详情 -->
-<div class="container">
-    <div class="row">
-        <div class="col-9">
-            <!-- 标题及作者 -->
-            <h1 class="mt-4 mb-4">{{ article.title }}</h1>
-            <div class="alert alert-success">作者：{{ article.author }}
-                {% if user == article.author %}
-                · <a href="#" onclick="confirm_safe_delete()">删除文章</a>
-                · <a href="{% url 'article:article_update' article.id %}">编辑文章</a>
-                {% endif %}
-                <form
-                        style="display:none;"
-                        id="safe_delete"
-                        action="{% url 'article:article_safe_delete' article.id %}"
-                        method="POST"
-                        >
+
+    <!-- 文章详情 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <!-- 标题及作者 -->
+                <h1 class="mt-4 mb-4">{{ article.title }}</h1>
+                <div class="alert alert-success">作者：{{ article.author }}
+                    {% if user == article.author %}
+                        · <a href="#" onclick="confirm_safe_delete()">删除文章</a>
+                        · <a href="{% url 'article:article_update' article.id %}">编辑文章</a>
+                    {% endif %}
+                    <form
+                            style="display:none;"
+                            id="safe_delete"
+                            action="{% url 'article:article_safe_delete' article.id %}"
+                            method="POST"
+                    >
                         {% csrf_token %}
                         <button type="submit">发送</button>
-                </form>
-                <div>
-                    浏览：{{ article.total_views }}
+                    </form>
+                    <div>
+                        浏览：{{ article.total_views }}
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-3 mt-4" id="sidebar" >
-            <div class="sidebar__inner">
-                <h4><strong>目录</strong></h4>
-                <hr>
-                <div>
-                    {{ toc|safe }}
+            <div class="col-3 mt-4" id="sidebar">
+                <div class="sidebar__inner">
+                    <h4><strong>目录</strong></h4>
+                    <hr>
+                    <div>
+                        {{ toc|safe }}
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 文章正文 -->
-        <div class="col-9"><p>{{ article.body|safe }}</p></div>
+            <!-- 文章正文 -->
+            <div class="col-9"><p>{{ article.body|safe }}</p></div>
         </div>
-<div class="row">
-        <!-- 新增点赞按钮 -->
-<div style="text-align:center;" class="mt-4">
-    <button class="btn btn-outline-danger"
-            type="button"
-            onclick="validate_is_like(
-                     '{% url 'article:increase_likes' article.id %}',
-                     {{ article.id }},
-                     {{ article.likes }}
-                     )"
-            >
-        <span>点赞</span>
-        <span>
+        <div class="row">
+            <!-- 新增点赞按钮 -->
+            <div style="text-align:center;" class="mt-4">
+                <button class="btn btn-outline-danger"
+                        type="button"
+                        onclick="validate_is_like(
+                                '{% url 'article:increase_likes' article.id %}',
+                                {{ article.id }},
+                                {{ article.likes }}
+                                )"
+                >
+                    <span>点赞</span>
+                    <span>
             <i class="fas fa-heart"></i>
         </span>
-        <span id="likes_number">
+                    <span id="likes_number">
             {{ article.likes }}
         </span>
-    </button>
-</div>
+                </button>
+            </div>
 
-    </div>
-    <hr width="100%">
+        </div>
         <div class="row">
-<div id="comments" class="col-9">
-    <script src="https://utteranc.es/client.js"
-        repo="TBHLLL/My_Blog_Talk"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-    </div>
+            <div id="comments" class="col-9">
+                <script src="https://utteranc.es/client.js"
+                        repo="TBHLLL/My_Blog_Talk"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
             </div>
         </div>
     </div>
-</div>
+    </div>
+    </div>
 
-<script>
-    // 删除文章的函数
-    function confirm_safe_delete() {
-    layer.open({
-        title: "确认删除",
-        content: "确认删除这篇文章吗？",
-        yes: function(index, layero) {
-            $('form#safe_delete button').click();
-            layer.close(index);
-        }
-    })
-}
-</script>
-{% block script %}
-<script src="{% static 'sticky_sidebar/jquery.sticky-sidebar.min.js' %}"></script>
-<script type="text/javascript">
-    $('#sidebar').stickySidebar({
-        topSpacing: 20,
-        bottomSpacing: 20,
-    });
-</script>
-<script src="{% static 'csrf.js' %}"></script>
-<script>
-    // 点赞功能主函数
-    function validate_is_like(url, id, likes) {
-        // 取出 LocalStorage 中的数据
-        let storage = window.localStorage;
-        const storage_str_data = storage.getItem("my_blog_data");
-        let storage_json_data = JSON.parse(storage_str_data);
-        // 若数据不存在，则创建空字典
-        if (!storage_json_data) {
-            storage_json_data = {}
-        };
-        // 检查当前文章是否已点赞。是则 status = true
-        const status = check_status(storage_json_data, id);
-        if (status) {
-            layer.msg('已经点过赞了哟~');
-            // 点过赞则立即退出函数
-            return;
-        } else {
-            // 用 Jquery 找到点赞数量，并 +1
-            $('span#likes_number').text(likes + 1).css('color', '#dc3545');
-        }
-        // 用 ajax 向后端发送 post 请求
-        $.post(
-            url,
-            // post 只是为了做 csrf 校验，因此数据为空
-            {},
-            function(result) {
-                if (result === 'success') {
-                    // 尝试修改点赞数据
-                    try {
-                        storage_json_data[id] = true;
-                    } catch (e) {
-                        window.localStorage.clear();
-                    };
-                    // 将字典转换为字符串，以便存储到 LocalStorage
-                    const d = JSON.stringify(storage_json_data);
-                    // 尝试存储点赞数据到 LocalStorage
-                    try {
-                        storage.setItem("my_blog_data", d);
-                    } catch (e) {
-                        // code 22 错误表示 LocalStorage 空间满了
-                        if (e.code === 22) {
-                            window.localStorage.clear();
-                            storage.setItem("my_blog_data", d);
-                        }
-                    };
-                } else {
-                    layer.msg("与服务器通信失败..过一会儿再试试呗~");
+    <script>
+        // 删除文章的函数
+        function confirm_safe_delete() {
+            layer.open({
+                title: "确认删除",
+                content: "确认删除这篇文章吗？",
+                yes: function (index, layero) {
+                    $('form#safe_delete button').click();
+                    layer.close(index);
                 }
+            })
+        }
+    </script>
+    {% block script %}
+        <script src="{% static 'sticky_sidebar/jquery.sticky-sidebar.min.js' %}"></script>
+        <script type="text/javascript">
+            $('#sidebar').stickySidebar({
+                topSpacing: 20,
+                bottomSpacing: 20,
+            });
+        </script>
+        <script src="{% static 'csrf.js' %}"></script>
+        <script>
+            // 点赞功能主函数
+            function validate_is_like(url, id, likes) {
+                // 取出 LocalStorage 中的数据
+                let storage = window.localStorage;
+                const storage_str_data = storage.getItem("my_blog_data");
+                let storage_json_data = JSON.parse(storage_str_data);
+                // 若数据不存在，则创建空字典
+                if (!storage_json_data) {
+                    storage_json_data = {}
+                }
+                ;
+                // 检查当前文章是否已点赞。是则 status = true
+                const status = check_status(storage_json_data, id);
+                if (status) {
+                    layer.msg('已经点过赞了哟~');
+                    // 点过赞则立即退出函数
+                    return;
+                } else {
+                    // 用 Jquery 找到点赞数量，并 +1
+                    $('span#likes_number').text(likes + 1).css('color', '#dc3545');
+                }
+                // 用 ajax 向后端发送 post 请求
+                $.post(
+                    url,
+                    // post 只是为了做 csrf 校验，因此数据为空
+                    {},
+                    function (result) {
+                        if (result === 'success') {
+                            // 尝试修改点赞数据
+                            try {
+                                storage_json_data[id] = true;
+                            } catch (e) {
+                                window.localStorage.clear();
+                            }
+                            ;
+                            // 将字典转换为字符串，以便存储到 LocalStorage
+                            const d = JSON.stringify(storage_json_data);
+                            // 尝试存储点赞数据到 LocalStorage
+                            try {
+                                storage.setItem("my_blog_data", d);
+                            } catch (e) {
+                                // code 22 错误表示 LocalStorage 空间满了
+                                if (e.code === 22) {
+                                    window.localStorage.clear();
+                                    storage.setItem("my_blog_data", d);
+                                }
+                            }
+                            ;
+                        } else {
+                            layer.msg("与服务器通信失败..过一会儿再试试呗~");
+                        }
 
-            }
-        );
-    };
+                    }
+                );
+            };
 
-    // 辅助点赞主函数，验证点赞状态
-    function check_status(data, id) {
-        // 尝试查询点赞状态
-        try {
-            if (id in data && data[id]) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (e) {
-            window.localStorage.clear();
-            return false;
-        };
-    };
-</script>
-{% endblock script %}
+            // 辅助点赞主函数，验证点赞状态
+            function check_status(data, id) {
+                // 尝试查询点赞状态
+                try {
+                    if (id in data && data[id]) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } catch (e) {
+                    window.localStorage.clear();
+                    return false;
+                }
+                ;
+            };
+        </script>
+    {% endblock script %}
 {% endblock content %}

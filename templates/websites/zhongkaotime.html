@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
+{% load static %}
 
-<head>
-    <title>Count</title>
-    <meta charset="UTF-8">
+{% block title %}
+    ZhongkaoHTML
+{% endblock title %}
+{% block head %}
     <style>
         .cover {
             z-index: -1;
@@ -86,9 +87,9 @@
             text-shadow: 0 0 20px rgba(0, 0, 0, .50);
         }
     </style>
-</head>
+{% endblock head %}
 
-<body>
+{% block content %}
     <img id="bgBox" alt="" src="https://bing.shangzhenyang.com/api/4k" style="display: block; opacity: 1;" class="">
     <div class="cover" id="cover" style="opacity: 1;"></div>
     <div id="title1" class="countdown-title">
@@ -160,6 +161,4 @@
             // }
         }, 1000);
     </script>
-</body>
-
-</html>
+{% endblock content %}
