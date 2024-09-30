@@ -1,7 +1,7 @@
 <!-- extends表明此页面继承自 base.html 文件 -->
 {% extends "base.html" %}
+{% load my_filters_and_tags %}
 {% load static %}
-
 
 <!-- 写入 base.html 中定义的 title -->
 {% block title %}
@@ -95,10 +95,9 @@
                 </span>
                 <span style="color:gray;">
                     <i class="fas fa-clock" style="color: pink;"></i>
-                    {{ article.created|date:'Y-m-d' }} &nbsp;&nbsp;&nbsp;
+                    {{ article.created|timesince_zh }} &nbsp;&nbsp;&nbsp;
                 </span>
             </p>
-            <hr >
         </div>
         <hr style="width:100%"/>
         {% endfor %}

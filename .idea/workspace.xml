@@ -5,69 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8a4dee7-1573-4465-8274-b8ce5df3e7a9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/media/article/20240831/屏幕截图_2024-08-30_111050.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/prism/prism.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/server/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/article/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/article/templatetags/my_filters_and_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/md_css/monokai.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/primer/primer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/prism/prism.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/prism/prism.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_blog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/prism/prism.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/prism/prism.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/article/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/article/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/article/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/websites/zhongkaotime.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/websites/zhongkaotime.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -120,29 +69,30 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Django 服务器.未命名.executor": "Run",
-    "Django 测试.未命名.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/My_Blog-Django/templates/websites",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django 服务器.未命名.executor&quot;: &quot;Run&quot;,
+    &quot;Django 测试.未命名.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/My_Blog-Django/templates/websites&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\23927\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="365dda47-7077-4429-b76d-05b8ce9b56b6" reportId="My_Blog-Django/qodana/2024-04-06" />
@@ -155,6 +105,21 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\My_Blog-Django\templates\server" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Grunt" flag="true" />
+      <visibility group="Gulp" flag="true" />
+      <visibility group="HTTP 请求" flag="true" />
+      <visibility group="Node.js" flag="true" />
+      <visibility group="npm" flag="true" />
+      <visibility group="yarn" flag="true" />
+      <visibility group="最近的项目" flag="true" />
+      <visibility group="运行 Python 文件" flag="true" />
+      <visibility group="运行 conda 命令" flag="true" />
+      <visibility group="运行 pip 命令" flag="true" />
+      <visibility group="运行配置" flag="true" />
+    </myKeys>
   </component>
   <component name="RunManager" selected="Django 服务器.未命名">
     <configuration name="未命名" type="DjangoTestsConfigurationType" nameIsGenerated="true">
@@ -249,7 +214,9 @@
       <workItem from="1722399625454" duration="76000" />
       <workItem from="1722402327428" duration="3000" />
       <workItem from="1723539149864" duration="51000" />
-      <workItem from="1725076326994" duration="11781000" />
+      <workItem from="1725076326994" duration="23755000" />
+      <workItem from="1725361987131" duration="778000" />
+      <workItem from="1725362784577" duration="46000" />
     </task>
     <servers />
   </component>
